@@ -3,6 +3,8 @@ package pl.jaceksysiak.hibernate.demo.repository;
 import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -15,6 +17,8 @@ public class CourseRepository {
 	
 	@Autowired
 	EntityManager em;
+	
+	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	
 	public Course findById(Long id){
 		return em.find(Course.class, id);
@@ -34,8 +38,15 @@ public class CourseRepository {
 		em.remove(course);
 	}
 	
-	//public Course save(Course course) -> insert or update
+
+	public void playWithEntityManager() {
 	
+		logger.info("playWithEntityManager - START");
+		
+//		Course course = new Course("Web Services in 100 Steps");
+//		em.persist(course);
+//		course.setName("Web Services in 100 Steps - Updated");
+	}
 	
 
 }

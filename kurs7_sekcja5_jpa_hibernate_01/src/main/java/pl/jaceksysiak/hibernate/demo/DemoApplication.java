@@ -31,7 +31,7 @@ public class DemoApplication implements CommandLineRunner {
 		
 		repository.save(new Course("Microservices in 100 Steps"));
 		
-	// komentuje żeby nie usuwało mi tego rekordu	repository.deleteById(10001L);
+	// komentuje, żeby nie usuwało mi tego rekordu	repository.deleteById(10001L);
 
 		
 	}
