@@ -24,7 +24,7 @@ public class DemoApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		
+		/*
 		Course course = repository.findById(10001L);
 		
 		logger.info("Course 10001L -> {}", course);
@@ -32,7 +32,9 @@ public class DemoApplication implements CommandLineRunner {
 		repository.save(new Course("Microservices in 100 Steps"));
 		
 	// komentuje, żeby nie usuwało mi tego rekordu	repository.deleteById(10001L);
-
+*/
+		
+		repository.playWithEntityManager();
 		
 	}
 }

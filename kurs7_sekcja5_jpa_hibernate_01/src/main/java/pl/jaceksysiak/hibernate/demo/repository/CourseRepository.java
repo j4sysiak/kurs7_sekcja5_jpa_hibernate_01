@@ -43,9 +43,11 @@ public class CourseRepository {
 	
 		logger.info("playWithEntityManager - START");
 		
-//		Course course = new Course("Web Services in 100 Steps");
-//		em.persist(course);
-//		course.setName("Web Services in 100 Steps - Updated");
+		Course course = new Course("Web Services in 100 Steps");
+		em.persist(course);
+		course.setName("Web Services in 100 Steps - Updated");
+		
+		logger.info("playWithEntityManager - STOP");
 	}
 	
 
