@@ -39,27 +39,41 @@ public class CourseRepository {
 	}
 	
 
-	public void playWithEntityManager() {
+//	public void playWithEntityManager() {
+//	
+//		logger.info("playWithEntityManager - START");
+//		
+//		Course course1 = new Course("Web Services in 100 Steps");
+//		em.persist(course1);	
+//		Course course2 = new Course("Angular Js in 100 Steps");
+//		em.persist(course2);
+//		
+//		em.flush();
+//		
+////		em.detach(course2);
+////		em.clear();
+////		
+//		
+//		course1.setName("Web Services in 100 Steps - Updated");
+//		course2.setName("Angular Js in 100 Steps - Updated");
+//		em.refresh(course2);
+//		em.flush();
+//
+//		logger.info("playWithEntityManager - STOP");
+//	}
 	
+	
+	
+	public void playWithEntityManager() {
+		
 		logger.info("playWithEntityManager - START");
 		
 		Course course1 = new Course("Web Services in 100 Steps");
 		em.persist(course1);	
-		em.flush();
 		
-		course1.setName("Web Services in 100 Steps - Updated");
-		em.flush();
-		
-		Course course2 = new Course("Angular Js in 100 Steps");
-		em.persist(course2);
-		em.flush();
-		
-		em.detach(course2);
+		Course course2 = findById(10001L);
+		course2.setName("XXXXXXXXXXXXXXXXXXXXXXXXXXX  updated");
 
-		course2.setName("Angular Js in 100 Steps - Updated");
-		em.flush();
-		
-//		em.refresh(course1);
 
 		logger.info("playWithEntityManager - STOP");
 	}

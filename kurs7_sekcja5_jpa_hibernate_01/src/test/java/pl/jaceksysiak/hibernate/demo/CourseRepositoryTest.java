@@ -28,7 +28,7 @@ public class CourseRepositoryTest {
 	public void myFirstTest_FindById() {
 		System.out.println("Testing is running ...");
 		Course course = repository.findById(10001L);
-		assertEquals("JPA in 501 Steps", course.getName());
+		assertEquals("JPA in 50 Steps", course.getName());
 		System.out.println("Testing finish.");
 	}
 	
@@ -45,16 +45,16 @@ public class CourseRepositoryTest {
 
 		// get a course
 		Course course = repository.findById(10001L);
-		assertEquals("JPA in 501 Steps", course.getName());
+		assertEquals("JPA in 50 Steps", course.getName());
 
 		// update details
-		course.setName("JPA in 501 Steps - Updated");
+		course.setName("JPA in 50 Steps - Updated");
 
 		repository.save(course);
 
 		// check the value
 		Course course1 = repository.findById(10001L);
-		assertEquals("JPA in 501 Steps - Updated", course1.getName());
+		assertEquals("JPA in 50 Steps - Updated", course1.getName());
 	}
 	
 	@Test
